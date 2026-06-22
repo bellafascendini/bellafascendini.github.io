@@ -37,17 +37,15 @@
       <div class="sidebar-info">
         <figure class="avatar-box">
           <img
-            src="./assets/images/portrait.jpg"
+            src="./assets/images/bella.jpeg"
             alt="Bella Fascendini"
-            width="80"
           />
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Bella Fascendini">Bella Fascendini</h1>
-          <p class="title">PhD Student</p>
-          <!-- Princeton University, centered and in white -->
-          <p style="text-align: center; color: white;">Princeton University</p>
+          <p class="title">PhD Student&nbsp;🐯&nbsp;·&nbsp;Cognitive Science Fellow&nbsp;·&nbsp;Statistics &amp; Machine Learning</p>
+          <p class="affiliation">Princeton University</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -128,6 +126,18 @@
               />
             </a>
           </li>
+          <li class="social-item">
+            <a
+              href="https://github.com/bellafascendini"
+              class="social-link"
+              target="_blank"
+            >
+              <ion-icon
+                name="logo-github"
+                style="font-size: 20px; color: white; margin-top: 2px;"
+              ></ion-icon>
+            </a>
+          </li>
         </ul>
       </div>
     </aside>
@@ -139,6 +149,9 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>The Latest</button>
           </li>
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>CV</button>
@@ -163,7 +176,7 @@
       
         <section class="about-text">
           <p>
-            Hello! My name is Bella Fascendini. I'm a PhD student at Princeton University, working with Profs. Tania Lombrozo and Tom Griffiths in the Psychology Department.
+            Hello! My name is Bella Fascendini. I'm a PhD student in the Psychology Department at Princeton University, with a minor in Statistics & Machine Learning, working with Profs. Tania Lombrozo and Tom Griffiths.
           </p>
           <p>
             I'm interested in studying what makes human intelligence powerful and where it meets its limits. Much of my current work examines how people form mental models of AI competence and when those models lead us astray. Specially, I'm investigating when and why people defer to AI judgment, how linguistic fluency creates illusions of AI competence, and how mechanistic explanations of LLM impact people's trust and deference to AI. Part of this work also involves investigating where LLM reasoning diverges from human reasoning, and what that gap tells us about the nature of intelligence itself.
@@ -178,7 +191,115 @@
             Outside of research, I enjoy spending time in nature (I LOVE camping!), reading, practicing yoga, doing soothing art projects and hanging out with my furrends (check out their photos in "For Fun"!). From 2021 to 2023, I also served as a co-host for the Stanford Psychology Podcast – it was one of the coolest experiences I've ever had! If you are interested, check it out <a href="https://open.spotify.com/show/1Gjst3RPtlLnOQoj3Kqb2M" style="color: white; text-decoration: none;">here</a>!
           </p>
         </section>
-      </article>      
+      </article>
+
+      <!-- THE LATEST -->
+      <article class="latest" data-page="the latest">
+        <header>
+          <h2 class="h2 article-title">The Latest</h2>
+        </header>
+
+        <section class="latest-feed">
+          <!-- News item: text only -->
+          <div class="news-item">
+            <span class="news-date">July 2026</span>
+            <h3 class="h3 news-title">Presenting at CogSci 2026 in Rio de Janeiro</h3>
+            <div class="news-body">
+              <p class="news-text">
+                This July, I'll be heading to Rio de Janeiro, Brazil for the Annual Meeting of the
+                Cognitive Science Society (CogSci 2026), where I'll be presenting in a symposium titled
+                <em>Learning About the Self in Early Childhood</em>. My talk, "Young children are
+                intrinsically motivated to explore what they can do," presents empirical and
+                computational evidence that children's exploration is driven by an intrinsic motivation
+                to understand and test their own abilities.
+              </p>
+            </div>
+          </div>
+
+          <!-- News item: text + photo -->
+          <div class="news-item">
+            <span class="news-date">June 2026</span>
+            <h3 class="h3 news-title">National Geographic Storytellers Collective — Storytelling for Impact</h3>
+            <div class="news-body">
+              <p class="news-text">
+                I spent three days at Princeton at the National Geographic Storytellers Collective's
+                <em>Storytelling for Impact</em> workshop, run together with the Templeton World Charity
+                Foundation and the Princeton AI Lab. Working with National Geographic Explorers, I
+                learned how to turn my research into a meaningful and accessible story to the public.
+                By the end, we each gave a three-minute talk with three slides and no notes. I am so
+                amazed and inspired by the art of storytelling. It was such a unique and unforgettable
+                experience!
+              </p>
+              <!-- To add a photo, drop the image in ./assets/images/ and update the src below.
+                   Delete a figure block if you don't want a photo for this entry. -->
+              <div class="news-photos">
+                <figure class="news-photo">
+                  <img
+                    src="./assets/images/natgeo_1.jpeg"
+                    alt="National Geographic Storyteller Collective Workshop"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="news-photo">
+                  <img
+                    src="./assets/images/natgeo_2.jpeg"
+                    alt="National Geographic Storyteller Collective Workshop"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- News item: text only -->
+          <div class="news-item">
+            <span class="news-date">June 2026</span>
+            <h3 class="h3 news-title">Science Communication Fellow at the Princeton AI Lab</h3>
+            <div class="news-body">
+              <p class="news-text">
+                This summer, I joined the Princeton AI Lab as a Science Communication Fellow, where
+                I'll be helping make AI research more accessible and engaging for broader audiences. As
+                part of this, I'll be writing pieces on the exciting research happening in the lab and
+                sharing them here regularly — stay tuned!
+              </p>
+              <div class="news-photos">
+                <figure class="news-photo">
+                  <img
+                    src="./assets/images/ailab.jpeg"
+                    alt="Princeton AI Lab"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- News item: text + photo -->
+          <div class="news-item">
+            <span class="news-date">March 2026</span>
+            <h3 class="h3 news-title">LinkedIn PhD Externship</h3>
+            <div class="news-body">
+              <p class="news-text">
+                This March, I spent a day at LinkedIn's NYC office for a Princeton GradFUTURES
+                externship. We got a behind-the-scenes look at LinkedIn and heard from a panel of
+                researchers about their work and career paths. Our conversations about navigating the
+                intersection of academic and industry research were super insightful, and I left
+                feeling really excited about the many ways research can drive real-world impact beyond
+                academia!
+              </p>
+              <div class="news-photos">
+                <figure class="news-photo">
+                  <img
+                    src="./assets/images/linkedin.jpeg"
+                    alt="LinkedIn PhD Externship group photo at LinkedIn NYC"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
 
       <!-- CV -->
       <article class="cv" data-page="cv">
@@ -230,6 +351,13 @@
 
           <ol class="timeline-list">
             <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Science Communication Fellow</h4>
+              <span>Summer 2026</span>
+              <p class="timeline-text">
+                Princeton AI Lab
+              </p>
+            </li>
+            <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Graduate Student Fellowship, Cognitive Science</h4>
               <span>2025 - 2026</span>
               <p class="timeline-text">
@@ -277,10 +405,11 @@
 
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">National Geographic Storytellers Conference</h4>
+              <h4 class="h4 timeline-item-title">National Geographic Storytellers Collective — Storytelling for Impact</h4>
               <span>June 2026</span>
               <p class="timeline-text">
-                Princeton University Natural and Artifical Minds, Princeton, NJ
+                3-day impact storytelling workshop led by National Geographic Explorers, in partnership
+                with the Templeton World Charity Foundation and the Princeton AI Lab, Princeton, NJ
               </p>
             </li>
 
@@ -976,6 +1105,144 @@
       position: absolute;
       left: 0;
       color: var(--orange-yellow-crayola);
+    }
+
+    /* Sidebar profile card aesthetics */
+    .sidebar-info {
+      flex-direction: column;
+      text-align: center;
+      gap: 14px;
+    }
+
+    .avatar-box {
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .avatar-box img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      object-position: center 55%;
+      border-radius: 18px;
+    }
+
+    .info-content {
+      width: 100%;
+    }
+
+    .info-content .name {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .info-content .title {
+      display: inline-block;
+      background: transparent;
+      color: var(--light-gray);
+      font-size: 0.78rem;
+      letter-spacing: 0.3px;
+      padding: 0;
+      margin: 0 auto 8px;
+      width: auto;
+    }
+
+    .info-content .affiliation {
+      text-align: center;
+      color: var(--orange-yellow-crayola);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* Wider sidebar on desktop so the full email is visible */
+    @media (min-width: 1250px) {
+      .main-content {
+        min-width: 72%;
+        width: 72%;
+      }
+      .contact-info :is(.contact-link, time, address) {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        word-break: break-word;
+      }
+    }
+
+    /* The Latest (news feed) styles */
+    .latest-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .news-item {
+      padding: 1.5rem;
+      border-left: 3px solid var(--orange-yellow-crayola);
+      background-color: var(--border-gradient-onyx);
+      border-radius: 0 5px 5px 0;
+    }
+
+    .news-date {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--orange-yellow-crayola);
+      margin-bottom: 0.5rem;
+    }
+
+    .news-title {
+      margin-bottom: 0.8rem;
+    }
+
+    .news-body {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .news-text {
+      flex: 1;
+      line-height: 1.7;
+      color: var(--light-gray);
+    }
+
+    .news-photos {
+      flex: 0 0 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .news-photo {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid var(--jet);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      aspect-ratio: 4 / 3;
+    }
+
+    .news-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .news-photo img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 580px) {
+      .news-body {
+        flex-direction: column;
+      }
+      .news-photos {
+        flex: 1 1 auto;
+        width: 100%;
+      }
     }
 
     /* Pet gallery styles */
