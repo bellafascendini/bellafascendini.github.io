@@ -138,6 +138,18 @@
               ></ion-icon>
             </a>
           </li>
+          <li class="social-item">
+            <a
+              href="https://www.linkedin.com/in/bella-fascendini"
+              class="social-link"
+              target="_blank"
+            >
+              <ion-icon
+                name="logo-linkedin"
+                style="font-size: 20px; color: white; margin-top: 2px;"
+              ></ion-icon>
+            </a>
+          </li>
         </ul>
       </div>
     </aside>
@@ -213,6 +225,45 @@
                 computational evidence that children's exploration is driven by an intrinsic motivation
                 to understand and test their own abilities.
               </p>
+            </div>
+          </div>
+
+          <!-- News item: text only -->
+          <div class="news-item">
+            <span class="news-date">June 2026</span>
+            <h3 class="h3 news-title">New paper out!</h3>
+            <div class="news-body news-body--stack">
+              <p class="news-text">
+                I have a new paper out! We introduce "riddle riddles" to test whether large
+                language models reason flexibly or just pattern-match — and find that humans and
+                LLMs fail in opposite directions. Read the preprint below.
+              </p>
+              <a
+                class="link-preview"
+                href="https://arxiv.org/abs/2606.27103"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="link-preview-thumb">
+                  <img
+                    src="./assets/images/riddle_paper.png"
+                    alt="First page of the paper The Riddle Riddle"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="link-preview-info">
+                  <span class="link-preview-domain">arxiv.org</span>
+                  <span class="link-preview-title"
+                    >The Riddle Riddle: Testing Flexible Reasoning in Large Language Models and
+                    Humans</span
+                  >
+                  <span class="link-preview-desc"
+                    >A new paradigm testing whether LLMs reason flexibly or pattern-match on
+                    surface form, across nine state-of-the-art models and 100 human
+                    participants.</span
+                  >
+                </span>
+              </a>
             </div>
           </div>
 
@@ -659,7 +710,7 @@
           <h3 class="h3">Journal Articles & Conference Proceedings</h3>
           <div class="publications-container">
             <div class="publications-list">
-              <!-- updated October 2025 -->
+              <!-- updated June 2026 -->
 
               <div class="publication-item">
                 <p class="publication-authors">
@@ -783,6 +834,23 @@
 
             <h3 class="h3 mt-5">Manuscripts in Preparation/Under Review</h3>
             <div class="publications-list">
+              <div class="publication-item">
+                <p class="publication-authors">
+                  Fascendini, B., McGregor, K., Gupta, M.D., Griffiths, T.L. (under review)
+                </p>
+                <p class="publication-title">
+                  The Riddle Riddle: Testing Flexible Reasoning in Large Language Models and Humans
+                </p>
+                <div class="publication-links">
+                  <a
+                    href="https://arxiv.org/abs/2606.27103"
+                    target="_blank"
+                    class="publication-link"
+                    >Preprint</a
+                  >
+                </div>
+              </div>
+
               <div class="publication-item">
                 <p class="publication-authors">
                   Fascendini, B., Zhao, B., Vélez, N. (in prep)
@@ -1156,17 +1224,33 @@
       margin: 0;
     }
 
-    /* Wider sidebar on desktop so the full email is visible */
+    /* Center the social icons evenly (override the template's left-aligned
+       default and its asymmetric padding). */
+    .sidebar .social-list {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    /* Keep the full email/location visible on one line at every width.
+       Higher specificity (.sidebar .contact-info ...) + later source order
+       than the template overrides its nowrap/ellipsis clipping at >=1250px
+       and its single-letter wrapping at smaller widths. */
+    .sidebar .contact-info :is(.contact-link, time, address) {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      font-size: 14px;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    /* Give the sidebar more room on desktop so the full email fits on one
+       line at its natural size; the main content takes the rest. */
     @media (min-width: 1250px) {
       .main-content {
-        min-width: 72%;
-        width: 72%;
-      }
-      .contact-info :is(.contact-link, time, address) {
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
-        word-break: break-word;
+        min-width: 71%;
+        width: 71%;
       }
     }
 
@@ -1207,6 +1291,92 @@
       flex: 1;
       line-height: 1.7;
       color: var(--light-gray);
+    }
+
+    .news-text a,
+    .news-text a:visited,
+    .news-text a:hover {
+      display: inline !important;
+      color: var(--orange-yellow-crayola);
+      text-decoration: underline;
+    }
+
+    /* Stacked news body (text above a link preview) */
+    .news-body--stack {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Link preview card */
+    .link-preview {
+      display: flex !important;
+      align-items: stretch;
+      gap: 0;
+      max-width: 520px;
+      border: 1px solid var(--jet);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: var(--eerie-black-2, rgba(0, 0, 0, 0.2));
+      text-decoration: none;
+      transition: border-color 0.25s ease, transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .link-preview:hover {
+      border-color: var(--orange-yellow-crayola);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .link-preview-thumb {
+      flex: 0 0 120px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .link-preview-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .link-preview-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding: 0.9rem 1rem;
+      min-width: 0;
+    }
+
+    .link-preview-domain {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--light-gray-70, #9a9a9a);
+    }
+
+    .link-preview-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--white-2, #fafafa);
+    }
+
+    .link-preview-desc {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--light-gray, #d6d6d6);
+    }
+
+    @media (max-width: 480px) {
+      .link-preview {
+        flex-direction: column;
+      }
+      .link-preview-thumb {
+        flex-basis: 140px;
+      }
     }
 
     .news-photos {
