@@ -191,8 +191,26 @@
             Hello! My name is Bella Fascendini. I'm a PhD student in the Psychology Department at Princeton University, with a minor in Statistics & Machine Learning, working with Profs. Tania Lombrozo and Tom Griffiths.
           </p>
           <p>
-            I'm interested in studying what makes human intelligence powerful and where it meets its limits. Much of my current work examines how people form mental models of AI competence and when those models lead us astray. Specially, I'm investigating when and why people defer to AI judgment, how linguistic fluency creates illusions of AI competence, and how mechanistic explanations of LLM impact people's trust and deference to AI. Part of this work also involves investigating where LLM reasoning diverges from human reasoning, and what that gap tells us about the nature of intelligence itself.
+            I'm interested in studying what makes human intelligence powerful and where it meets its limits. Much of my current work examines how people form mental models of AI competence and when those models lead us astray. Specifically, I'm investigating when and why people defer to AI judgment, how linguistic fluency creates illusions of AI competence, and how mechanistic explanations of LLMs impact people's trust and deference to AI. Part of this work also involves investigating where LLM reasoning diverges from human reasoning, and what that gap tells us about the nature of intelligence itself.
           </p>
+          <h3 class="h3 about-projects-title">Current Projects</h3>
+          <ul class="about-projects">
+            <li>
+              <strong>Learning and critical thinking:</strong> I'm studying how LLMs change the way
+              people learn and think critically, including whether they can spot flawed reasoning in
+              AI-generated explanations. Our goal is to use these insights to design AI systems that
+              support critical thinking.
+            </li>
+            <li>
+              <strong>Legal decision-making:</strong> In collaboration with Prof. Dave Lagnado (UCL), I'm
+              studying how LLMs influence the way people weigh evidence in legal decisions.
+            </li>
+            <li>
+              <strong>AI trust and alignment:</strong> As part of a large-scale DARPA project, I'm
+              working with a cross-institution team to study when and why people let AI systems make
+              decisions for them.
+            </li>
+          </ul>
           <p>
             Previously, I've done developmental work examining young children's intrinsic motivation to explore their own competence, using Bayesian models to formally tease apart what motivates exploration. This work also shaped how I think about studying intelligence more broadly. One unique challenge of developmental research is that we are trying to study cognition in agents who can't report what they know — a similar challenge to what AI researchers face today. My training in developmental research provided me tools for exactly this challenge: designing novel paradigms that dissociate competence from performance, rule out alternative explanations, and probe underlying mechanisms rather than taking behavior or performance at face value.
           </p>
@@ -1288,6 +1306,36 @@
       .main-content {
         min-width: 71%;
         width: 71%;
+      }
+    }
+
+    /* Current Projects list on the About page */
+    .about-projects-title {
+      margin: 25px 0 12px;
+    }
+
+    .about-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .about-projects li {
+      padding-left: 14px;
+      border-left: 3px solid var(--orange-yellow-crayola);
+    }
+
+    .about-projects strong {
+      color: var(--white-2);
+      font-weight: var(--fw-500);
+    }
+
+    /* On desktop the navbar sits in the top-right corner of the main content,
+       so start page headings below it. */
+    @media (min-width: 1024px) {
+      article > header {
+        padding-top: 45px;
       }
     }
 
